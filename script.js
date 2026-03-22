@@ -1,3 +1,13 @@
+// ===== PHOTO FALLBACK =====
+const heroPhoto = document.getElementById('heroPhoto');
+const photoFallback = document.getElementById('photoFallback');
+if (heroPhoto) {
+  heroPhoto.addEventListener('error', () => {
+    heroPhoto.style.display = 'none';
+    photoFallback.style.display = 'flex';
+  });
+}
+
 // ===== MATRIX RAIN =====
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');

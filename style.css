@@ -120,12 +120,142 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   max-width: 100%;
-  padding: 0 2rem;
-  background: radial-gradient(ellipse at center, rgba(0,255,136,0.03) 0%, transparent 70%);
+  padding: 0 4rem;
+  background: radial-gradient(ellipse at 30% 50%, rgba(0,255,136,0.04) 0%, transparent 60%);
 }
-.hero-content { max-width: 800px; }
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+.hero-content {
+  flex: 1;
+  max-width: 580px;
+}
+
+/* ===== HERO PHOTO ===== */
+.hero-photo-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spinning ring */
+.photo-ring {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--green) 0deg,
+    transparent 60deg,
+    var(--cyan) 120deg,
+    transparent 180deg,
+    var(--green) 240deg,
+    transparent 300deg,
+    var(--green) 360deg
+  );
+  animation: spin 6s linear infinite;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.photo-ring-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--bg);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg2);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fallback avatar (shown only if photo.jpg missing) */
+.photo-fallback {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg3);
+  border-radius: 50%;
+  z-index: 0;
+}
+.photo-fallback span {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  color: var(--green);
+  font-weight: bold;
+  text-shadow: var(--glow);
+}
+
+/* Green "Available" badge */
+.photo-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(5,10,14,0.9);
+  border: 1px solid var(--green);
+  border-radius: 20px;
+  padding: 0.3rem 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--green);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  backdrop-filter: blur(6px);
+}
+.badge-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(0,255,136,0.5); }
+  50% { box-shadow: 0 0 0 5px rgba(0,255,136,0); }
+}
+
+/* Corner bracket decorations */
+.corner {
+  position: absolute;
+  width: 18px; height: 18px;
+  border-color: var(--cyan);
+  border-style: solid;
+  opacity: 0.6;
+}
+.corner.tl { top: 0; left: 0; border-width: 2px 0 0 2px; }
+.corner.tr { top: 0; right: 0; border-width: 2px 2px 0 0; }
+.corner.bl { bottom: 20px; left: 0; border-width: 0 0 2px 2px; }
+.corner.br { bottom: 20px; right: 0; border-width: 0 2px 2px 0; }
 .terminal-line {
   font-family: var(--font-mono);
   font-size: 1rem;
@@ -528,6 +658,11 @@ footer p { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.8
   .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg); padding: 1rem; border-bottom: 1px solid var(--border); }
   .nav-links.open { display: flex; }
   .hamburger { display: block; }
+  #hero { padding: 0 1.5rem; }
+  .hero-layout { flex-direction: column-reverse; text-align: center; gap: 2.5rem; padding-top: 6rem; }
+  .hero-photo-wrap { width: 200px; height: 200px; }
+  .photo-ring { width: 190px; height: 190px; }
+  .hero-btns { justify-content: center; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .workflow-container { flex-direction: column; align-items: center; }
   .wf-arrow { transform: rotate(90deg); }
