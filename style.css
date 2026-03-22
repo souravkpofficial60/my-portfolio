@@ -163,7 +163,7 @@ section {
     transparent 300deg,
     var(--green) 360deg
   );
-  animation: spin 6s linear infinite;
+animation: none;
   padding: 3px;
   display: flex;
   align-items: center;
