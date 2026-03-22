@@ -1,61 +1,23 @@
-# .github/workflows/deploy.yml
-# This file runs automatically every time you push to GitHub!
-# It: (1) checks your HTML/CSS/JS, (2) deploys to GitHub Pages
-
-name: CI/CD Pipeline — Build & Deploy
-
-on:
-  push:
-    branches: [main]      # Runs when you push to main branch
-  pull_request:
-    branches: [main]      # Also runs on pull requests
-
-jobs:
-  # ── JOB 1: Check & Lint ──────────────────────────────
-  lint-and-check:
-    name: 🔍 Lint & Validate
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v4
-
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: 🔍 Check HTML files exist
-        run: |
-          echo "Checking portfolio files..."
-          ls -la index.html style.css script.js
-          echo "✅ All frontend files found!"
-
-      - name: 📦 Install backend dependencies
-        working-directory: ./backend
-        run: npm install
-
-      - name: ✅ Validate backend can be required
-        working-directory: ./backend
-        run: node -e "const express = require('express'); console.log('✅ Express loaded OK');"
-
-  # ── JOB 2: Deploy to GitHub Pages ──────────────────
-  deploy:
-    name: 🚀 Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    needs: lint-and-check        # Only runs if Job 1 passes
-    if: github.ref == 'refs/heads/main'   # Only on main branch push
-
-    permissions:
-      contents: write            # Needed to push to gh-pages branch
-
-    steps:
-      - name: 📥 Checkout code
-        uses: actions/checkout@v4
-
-      - name: 🚀 Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./         # Deploy the root folder (your HTML/CSS/JS)
-          exclude_assets: '.github,backend,node_modules,*.md'
+(
+echo name: Deploy Portfolio
+echo.
+echo on:
+echo   push:
+echo     branches: [main]
+echo.
+echo jobs:
+echo   deploy:
+echo     name: Deploy to GitHub Pages
+echo     runs-on: ubuntu-latest
+echo     permissions:
+echo       contents: write
+echo     steps:
+echo       - name: Checkout code
+echo         uses: actions/checkout@v4
+echo       - name: Deploy to GitHub Pages
+echo         uses: peaceiris/actions-gh-pages@v4
+echo         with:
+echo           github_token: ${{ secrets.GITHUB_TOKEN }}
+echo           publish_dir: ./
+echo           exclude_assets: '.github,backend,node_modules'
+) > ".github\workflows\deploy.yml"
