@@ -1,23 +1,22 @@
-(
-echo name: Deploy Portfolio
-echo.
-echo on:
-echo   push:
-echo     branches: [main]
-echo.
-echo jobs:
-echo   deploy:
-echo     name: Deploy to GitHub Pages
-echo     runs-on: ubuntu-latest
-echo     permissions:
-echo       contents: write
-echo     steps:
-echo       - name: Checkout code
-echo         uses: actions/checkout@v4
-echo       - name: Deploy to GitHub Pages
-echo         uses: peaceiris/actions-gh-pages@v4
-echo         with:
-echo           github_token: ${{ secrets.GITHUB_TOKEN }}
-echo           publish_dir: ./
-echo           exclude_assets: '.github,backend,node_modules'
-) > ".github\workflows\deploy.yml"
+name: Deploy Portfolio
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          exclude_assets: '.github,backend,node_modules'
