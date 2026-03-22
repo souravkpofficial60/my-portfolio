@@ -163,13 +163,13 @@ section {
     transparent 300deg,
     var(--green) 360deg
   );
-  animation: spin 6s linear infinite;
+  
   padding: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-@keyframes spin { to { transform: rotate(360deg); } }
+
 
 .photo-ring-inner {
   width: 100%;
