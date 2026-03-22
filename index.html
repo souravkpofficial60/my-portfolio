@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sourav KP | Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="matrix"></canvas>
+
+  <nav id="navbar">
+    <div class="nav-brand">&gt;_ SKP</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#workflow">Workflow</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="terminal-line">
+        <span class="prompt">root@skp:~$</span>
+        <span id="typed"></span><span class="cursor">|</span>
+      </div>
+      <h1 class="glitch" data-text="SOURAV KP">SOURAV KP</h1>
+      <p class="hero-sub">BCA Student &nbsp;/&nbsp; Aspiring Developer &nbsp;/&nbsp; Cybersecurity Enthusiast</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <div class="scroll-hint">scroll down ↓</div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header">
+      <span class="tag">&lt;section id="about"&gt;</span>
+      <h2>About <span class="accent">Me</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card terminal-card">
+        <div class="terminal-topbar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">profile.txt</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="key">name</span>: <span class="val">"Sourav KP"</span></p>
+          <p><span class="key">degree</span>: <span class="val">"Bachelor of Computer Applications"</span></p>
+          <p><span class="key">year</span>: <span class="val">"2nd Year"</span></p>
+          <p><span class="key">focus</span>: <span class="val">["Web Dev", "Cybersecurity", "Open Source"]</span></p>
+          <p><span class="key">status</span>: <span class="blink green-text">"actively learning"</span></p>
+        </div>
+      </div>
+      <div class="about-text">
+        <p>Hey there! I'm Sourav, a BCA student passionate about building things on the web and understanding how to secure them. I love turning ideas into code and exploring the fascinating world of cybersecurity.</p>
+        <p>Currently diving deep into <span class="accent">full-stack development</span>, <span class="accent">DevOps workflows</span>, and <span class="accent">network security fundamentals</span> — all while completing my degree.</p>
+        <p>When I'm not coding, you'll find me on CTF platforms, reading security writeups, or experimenting with new frameworks.</p>
+        <div class="stats-row">
+          <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Projects</span></div>
+          <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Languages</span></div>
+          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Curiosity</span></div>
+        </div>
+      </div>
+    </div>
+    <span class="tag close-tag">&lt;/section&gt;</span>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="tag">&lt;section id="skills"&gt;</span>
+      <h2>My <span class="accent">Skills</span></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3><span class="icon">⚡</span> Frontend</h3>
+        <div class="skill-list">
+          <div class="skill-item"><span>HTML5</span><div class="bar"><div class="fill" style="--w:85%"></div></div></div>
+          <div class="skill-item"><span>CSS3</span><div class="bar"><div class="fill" style="--w:80%"></div></div></div>
+          <div class="skill-item"><span>JavaScript</span><div class="bar"><div class="fill" style="--w:70%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3><span class="icon">🛠</span> Backend</h3>
+        <div class="skill-list">
+          <div class="skill-item"><span>Node.js</span><div class="bar"><div class="fill" style="--w:65%"></div></div></div>
+          <div class="skill-item"><span>Express.js</span><div class="bar"><div class="fill" style="--w:60%"></div></div></div>
+          <div class="skill-item"><span>PostgreSQL</span><div class="bar"><div class="fill" style="--w:55%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3><span class="icon">🔒</span> Security</h3>
+        <div class="skill-list">
+          <div class="skill-item"><span>Network Basics</span><div class="bar"><div class="fill" style="--w:60%"></div></div></div>
+          <div class="skill-item"><span>Linux CLI</span><div class="bar"><div class="fill" style="--w:65%"></div></div></div>
+          <div class="skill-item"><span>OWASP Top 10</span><div class="bar"><div class="fill" style="--w:50%"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3><span class="icon">🚀</span> DevOps</h3>
+        <div class="skill-list">
+          <div class="skill-item"><span>Git & GitHub</span><div class="bar"><div class="fill" style="--w:75%"></div></div></div>
+          <div class="skill-item"><span>GitHub Actions</span><div class="bar"><div class="fill" style="--w:55%"></div></div></div>
+          <div class="skill-item"><span>Render / Vercel</span><div class="bar"><div class="fill" style="--w:60%"></div></div></div>
+        </div>
+      </div>
+    </div>
+    <span class="tag close-tag">&lt;/section&gt;</span>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="tag">&lt;section id="projects"&gt;</span>
+      <h2>My <span class="accent">Projects</span></h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon">🌐</div>
+        <h3>Cybersecurity Portfolio</h3>
+        <p>A dark-themed personal portfolio with Matrix rain animation, terminal UI components, and full CI/CD pipeline on GitHub Actions.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span><span>GitHub Actions</span></div>
+        <div class="project-links">
+          <a href="#" class="btn-sm">Live ↗</a>
+          <a href="#" class="btn-sm outline">GitHub</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">📬</div>
+        <h3>Contact API</h3>
+        <p>RESTful API built with Node.js + Express that saves contact form submissions to a PostgreSQL database, deployed on Render.com.</p>
+        <div class="project-tags"><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Render</span></div>
+        <div class="project-links">
+          <a href="#" class="btn-sm">API Docs ↗</a>
+          <a href="#" class="btn-sm outline">GitHub</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🔍</div>
+        <h3>Port Scanner (Python)</h3>
+        <p>A CLI-based port scanner built with Python's socket library. Scans a given IP range and reports open ports with service detection.</p>
+        <div class="project-tags"><span>Python</span><span>Networking</span><span>CLI</span></div>
+        <div class="project-links">
+          <a href="#" class="btn-sm">Demo ↗</a>
+          <a href="#" class="btn-sm outline">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <span class="tag close-tag">&lt;/section&gt;</span>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section id="workflow">
+    <div class="section-header">
+      <span class="tag">&lt;section id="workflow"&gt;</span>
+      <h2>Dev <span class="accent">Workflow</span></h2>
+      <p class="section-sub">My HOD's Modern Web Development Workflow — implemented live</p>
+    </div>
+    <div class="workflow-container">
+      <div class="workflow-step">
+        <div class="wf-icon">💻</div>
+        <div class="wf-label">Local Git Repo</div>
+        <div class="wf-desc">Write code in VS Code, commit with Git</div>
+      </div>
+      <div class="wf-arrow">→</div>
+      <div class="workflow-step">
+        <div class="wf-icon">🐙</div>
+        <div class="wf-label">GitHub</div>
+        <div class="wf-desc">Push code to remote repository</div>
+      </div>
+      <div class="wf-arrow">→</div>
+      <div class="workflow-step">
+        <div class="wf-icon">⚙️</div>
+        <div class="wf-label">CI/CD Pipeline</div>
+        <div class="wf-desc">GitHub Actions: lint, test, build automatically</div>
+      </div>
+      <div class="wf-arrow">→</div>
+      <div class="workflow-step">
+        <div class="wf-icon">☁️</div>
+        <div class="wf-label">Hosting</div>
+        <div class="wf-desc">GitHub Pages (frontend) + Render (backend + DB)</div>
+      </div>
+      <div class="wf-arrow">→</div>
+      <div class="workflow-step">
+        <div class="wf-icon">🌍</div>
+        <div class="wf-label">Web Browser</div>
+        <div class="wf-desc">Live website, accessible worldwide</div>
+      </div>
+    </div>
+    <span class="tag close-tag">&lt;/section&gt;</span>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="tag">&lt;section id="contact"&gt;</span>
+      <h2>Get In <span class="accent">Touch</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info terminal-card">
+        <div class="terminal-topbar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">contact.sh</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> echo $EMAIL</p>
+          <p class="val">sourav@example.com</p>
+          <p><span class="prompt">$</span> echo $GITHUB</p>
+          <p class="val">github.com/souravkp</p>
+          <p><span class="prompt">$</span> echo $LINKEDIN</p>
+          <p class="val">linkedin.com/in/souravkp</p>
+          <p><span class="prompt">$</span> echo $STATUS</p>
+          <p class="green-text blink">Open to internships &amp; collaborations</p>
+        </div>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="name">$ your_name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">$ your_email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">$ your_message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width" id="submitBtn">
+          <span id="btnText">Send Message →</span>
+        </button>
+        <div id="formStatus" class="form-status"></div>
+      </form>
+    </div>
+    <span class="tag close-tag">&lt;/section&gt;</span>
+  </section>
+
+  <footer>
+    <p>Designed &amp; built by <span class="accent">Sourav KP</span> | BCA Student</p>
+    <p class="footer-sub">© 2025 | MIT License | Deployed on GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
