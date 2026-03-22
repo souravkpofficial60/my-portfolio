@@ -87,7 +87,7 @@ reveals.forEach(el => observer.observe(el));
 
 // ===== CONTACT FORM =====
 // ⚠️  REPLACE the URL below with your Render.com backend URL after deployment
-const BACKEND_URL = 'https://your-backend.onrender.com/api/contact';
+const BACKEND_URL = 'https://souravkp-backend.onrender.com/api/contact';
 
 const form = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
