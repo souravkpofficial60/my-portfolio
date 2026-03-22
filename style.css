@@ -163,7 +163,7 @@ section {
     transparent 300deg,
     var(--green) 360deg
   );
-animation: none;
+  animation: spin 6s linear infinite;
   padding: 3px;
   display: flex;
   align-items: center;
@@ -214,24 +214,9 @@ animation: none;
   text-shadow: var(--glow);
 }
 
-/* Green "Available" badge */
+/* Badge hidden */
 .photo-badge {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(5,10,14,0.9);
-  border: 1px solid var(--green);
-  border-radius: 20px;
-  padding: 0.3rem 0.9rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--green);
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  backdrop-filter: blur(6px);
+  display: none;
 }
 .badge-dot {
   width: 7px; height: 7px;
