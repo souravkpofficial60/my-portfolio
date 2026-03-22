@@ -27,18 +27,44 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-content">
-      <div class="terminal-line">
-        <span class="prompt">root@skp:~$</span>
-        <span id="typed"></span><span class="cursor">|</span>
+    <div class="hero-layout">
+
+      <!-- LEFT: Text -->
+      <div class="hero-content">
+        <div class="terminal-line">
+          <span class="prompt">root@skp:~$</span>
+          <span id="typed"></span><span class="cursor">|</span>
+        </div>
+        <h1 class="glitch" data-text="SOURAV KP">SOURAV KP</h1>
+        <p class="hero-sub">BCA Student &nbsp;/&nbsp; Aspiring Developer &nbsp;/&nbsp; Cybersecurity Enthusiast</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+        <div class="scroll-hint">scroll down ↓</div>
       </div>
-      <h1 class="glitch" data-text="SOURAV KP">SOURAV KP</h1>
-      <p class="hero-sub">BCA Student &nbsp;/&nbsp; Aspiring Developer &nbsp;/&nbsp; Cybersecurity Enthusiast</p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+
+      <!-- RIGHT: Photo -->
+      <div class="hero-photo-wrap">
+        <div class="photo-ring">
+          <div class="photo-ring-inner">
+            <img src="photo.jpg" alt="Sourav KP" class="hero-photo" id="heroPhoto" />
+            <!-- Fallback avatar shown if photo.jpg is missing -->
+            <div class="photo-fallback" id="photoFallback">
+              <span>SKP</span>
+            </div>
+          </div>
+        </div>
+        <div class="photo-badge">
+          <span class="badge-dot"></span> Available for Internship
+        </div>
+        <!-- Decorative corner brackets -->
+        <div class="corner tl"></div>
+        <div class="corner tr"></div>
+        <div class="corner bl"></div>
+        <div class="corner br"></div>
       </div>
-      <div class="scroll-hint">scroll down ↓</div>
+
     </div>
   </section>
 
@@ -215,7 +241,7 @@
         </div>
         <div class="terminal-body">
           <p><span class="prompt">$</span> echo $EMAIL</p>
-          <p class="val">sourav@example.com</p>
+          <p class="val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bccfd3c9ceddcafcd9c4ddd1ccd0d992dfd3d1">[email&#160;protected]</a></p>
           <p><span class="prompt">$</span> echo $GITHUB</p>
           <p class="val">github.com/souravkp</p>
           <p><span class="prompt">$</span> echo $LINKEDIN</p>
@@ -248,9 +274,4 @@
 
   <footer>
     <p>Designed &amp; built by <span class="accent">Sourav KP</span> | BCA Student</p>
-    <p class="footer-sub">© 2025 | MIT License | Deployed on GitHub Pages</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    <p class="footer-su
